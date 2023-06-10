@@ -1,0 +1,11 @@
+{
+    "extends": "./tsconfig",
+    "exclude": [
+        "./dist",
+        "jest.config.ts",
+        ".eslintrc.ts",
+        "**/*.spec.ts",
+        "**/*.test.ts",
+        "./tests"
+    ]
+}
