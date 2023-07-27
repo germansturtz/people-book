@@ -1,9 +1,8 @@
 import { Person } from '@/models/person';
-import { PersonsRepository } from '@/repositories/persons-repository';
+import { getPersonsRepository } from '@/repositories/persons/get-persons-repository';
 
-export const getPersonsService =
-    (repository: PersonsRepository) => async (): Promise<Person[]> => {
-        const response = await repository.getAll();
+export const getPersonsService = () => async (): Promise<Person[]> => {
+    const response = await getPersonsRepository();
 
-        return response;
-    };
+    return response;
+};
